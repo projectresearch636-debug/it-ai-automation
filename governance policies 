@@ -1,0 +1,62 @@
+Approved structure:
+it-ai-automation/
+└── governance-baseline/
+    ├── README.md
+    ├── AI-GOVERNANCE-POLICY.md
+    ├── AUTOMATION-GOVERNANCE-POLICY.md
+    ├── GITHUB-GOVERNANCE-POLICY.md
+    ├── SECURITY-POLICY.md
+    ├── DATA-GOVERNANCE-POLICY.md
+    ├── ACCESS-CONTROL-POLICY.md
+    ├── CHANGE-MANAGEMENT-POLICY.md
+    ├── INCIDENT-RESPONSE-POLICY.md
+    ├── VENDOR-INTEGRATION-POLICY.md
+    ├── AI-RISK-MANAGEMENT-POLICY.md
+    └── PRODUCTION-DEPLOYMENT-POLICY.md
+This is consistent with the previously approved governance baseline.
+4. Key Risk
+The important distinction is:
+Repository write access ≠ successful branch-write capability through this connected GitHub integration.
+The attempted controlled branch:
+governance/initial-baseline
+was rejected by GitHub with 403 — Resource not accessible by integration.
+I therefore will not weaken our governance controls by committing directly to main.
+5. Decisions Required
+No new CEO decision is required. The governance contents are already approved.
+The remaining technical gate is to restore a GitHub capability that permits:
+branch creation,
+commit/push,
+draft PR creation.
+6. Approved Actions
+Once branch-write capability is available, the execution sequence is locked:
+main → governance/initial-baseline → governance files → commit → push → draft PR → review
+The governance framework itself already specifies that main is the controlled baseline, development uses dedicated branches, and pull requests are the normal review mechanism.
+7. Cross-Department Coordination
+This governance baseline affects:
+IT, AI & Automation
+Security
+Legal & Compliance
+Finance
+HR
+Operations
+Data/BI
+Procurement & Vendor Management
+All future AI agents and automations
+Particularly important: consequential AI/automation activity remains subject to human approval.
+8. KPI Review
+Governance KPIs are already defined, including:
+AI evaluation pass rate
+automation success/failure rate
+security incidents
+vulnerability remediation time
+change failure rate
+deployment success rate
+MTTR
+unauthorized-access events
+technology cost
+integration reliability
+No values will be fabricated until telemetry exists.
+9. Next Priority
+P0 — Restore controlled GitHub write path
+We should not create governance files on main merely to get around the 403.
+The next technical objective is to make the connected GitHub integration capable of creating the controlled branch. After that, I can execute the governance baseline and draft PR workflow.
